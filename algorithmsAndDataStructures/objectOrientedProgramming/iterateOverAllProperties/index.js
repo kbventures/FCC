@@ -26,4 +26,13 @@ function Dog(name) {
 
 
 
+  // exports.beagle = beagle;
+  // exports.beagle = Dog; 
+  // exports.beagle = ownProps;
+  exports.ownProps = ownProps;
+  exports.prototypeProps = prototypeProps;
+
+
+
+
 

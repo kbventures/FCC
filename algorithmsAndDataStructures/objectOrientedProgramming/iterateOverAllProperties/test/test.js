@@ -1,30 +1,20 @@
-log = console.log;
-const iterateOverAllProperties = require('../index');
-var assert = require('chai').assert;
-var expect = require('chai').expect;
-var should = require('chai').should();
+require('chai').assert;
+require('chai').expect;
+require('chai').should();
+var test = require('../index');
 
 
 
-describe('Unit test.. right type of properties(own vs prototype) are in the correct array', () => 
+
+describe('Unit test.. ', () => 
 {
-    it('ownProps should include "name"', () => {
-            true.should.be.true;
-    });
-    it('prototypeProps array should include "numbLegs"', () => {
-            true.should.be.false;
-    })
 
+       it('ownProps should include "name"', () => {
+                test.ownProps.should.include('name');
+       })
+       it('prototypeProps should include "numblegs"', () => {
+               test.prototypeProps.should.include('numLegs');
+       })
 
 });
 
-
-/*
-The ownProps array should include "name".
-
-The prototypeProps array should include "numLegs".
-
-Passed
-You should solve this challenge without using the built in method Object.keys().
-
-*/
